@@ -3,10 +3,10 @@
 {
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
+  boot.zfs.extraPools = [ "data" ];
 
   services.zfs.trim.enable = true;
   services.zfs.autoScrub.enable = true;
-
 
   services.zfs.zed.enableMail = true;
   services.zfs.zed.settings = {

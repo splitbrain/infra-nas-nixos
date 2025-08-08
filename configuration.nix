@@ -31,6 +31,7 @@
     inetutils
     lsof
     mailutils
+    mc
   ];
 
   # programs (packages with setup stuff)

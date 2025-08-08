@@ -7,12 +7,15 @@
       openFirewall = true;
 
       settings = {
+        global = {
+          "smb3 unix extensions" = "yes";
+        };
         home = {
           comment = "Home Directory";
           path = "/home/%u";
           browsable = "yes";
           writable = "yes";
-          "create mask" = "0700";
+          "create mask" = "0600";
           "directory mask" = "0700";
         };
         music = {

@@ -17,4 +17,13 @@
     ZED_NOTIFY_INTERVAL_SECS = 3600;
     ZED_NOTIFY_VERBOSE = true;
   };
+
+  services.zfs.autoSnapshot = {
+    enable = true;
+    frequent = 2;
+    hourly = 4;
+    daily = 2;
+    weekly = 4;
+    monthly = 3;
+  };
 }

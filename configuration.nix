@@ -7,6 +7,7 @@
       ./modules/system.nix
       ./modules/zfs.nix
       ./modules/networking.nix
+      ./modules/tailscale.nix
       ./modules/agenix.nix
       
       ./modules/user-root.nix

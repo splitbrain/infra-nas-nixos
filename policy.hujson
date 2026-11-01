@@ -1,0 +1,22 @@
+// Tailscale policy file, applied to the tailnet by .github/workflows/tailscale.yml
+{
+	"tagOwners": {
+		// the NAS, acts as subnet router for the LAN
+		"tag:nas": ["autogroup:admin"],
+	},
+
+	"autoApprovers": {
+		"routes": {
+			"192.168.1.0/24": ["tag:nas"],
+		},
+	},
+
+	"grants": [
+		// all users can reach the full LAN
+		{
+			"src": ["autogroup:member"],
+			"dst": ["192.168.1.0/24"],
+			"ip":  ["*"],
+		},
+	],
+}
